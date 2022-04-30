@@ -28,6 +28,10 @@ const utils = {
         return store.locations.zip.toLowerCase().includes(string.toLowerCase());
     },
 
+    productMatch: (product, string) => {
+        return product.name.toLowerCase().includes(string.toLowerCase());
+    },
+
     // mtgMatch: (store, boolean) => {
     //     if (!string) {
     //         return true;

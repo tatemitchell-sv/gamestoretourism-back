@@ -22,32 +22,25 @@ app.post('/simplesearch', (rec, res) => {
     if (rec.body.searchString){
 
         const { searchString } = rec.body;
-    
+        
         const filteredData = data.filter( store => {
-            if (store.name.toLowerCase(searchString.toLowerCase())){
+            if (searchUtils.nameMatch(store,searchString) 
+            || searchUtils.cityMatch(store,searchString) 
+            || searchUtils.stateMatch(store,searchString)
+            || searchUtils.zipMatch(store,searchString)){
                 return store;
-            }
-            if (store.locations.city.toLowerCase(searchString.toLowerCase())){
-                return store;
-            }
-            if (store.locations.zip.toLowerCase(searchString.toLowerCase())){
-                return store;
-            }
-            if (store.locations.state.toLowerCase(searchString.toLowerCase())){
-                return store;
-            }
-            if (store.locations.statelong.toLowerCase(searchString.toLowerCase())){
-                return store;
-            }
-    
+            };
+
             const productFound = store.productsServices.find(product => {
-                if (product.name.toLowerCase() === searchString.toLowerCase()){
+                if (searchUtils.productMatch(product, searchString)){
                     return product;
                 }
             });
-            if(productFound){ return store; };
+            if(productFound){ 
+                return store; 
+            };
         });
-    
+
         return res.json(filteredData);
 
     }
