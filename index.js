@@ -66,6 +66,25 @@ app.post('/advancedsearch', (rec, res) => {
     return res.json(filteredData);
 });
 
+app.post('/createevent', (rec, res) => {
+    console.log('route /createevent requested');
+    
+
+    const { newEvent, storeID } = rec.body;
+    console.log('logging test: ', newEvent);
+    let storetoreturn = {};
+
+    data.forEach( store => {
+        if (store.id === storeID){
+            newEvent.id = store.events.length + 1;
+            store.events.push(newEvent);
+            storetoreturn = store;
+        }
+    });
+    
+    return res.json(storetoreturn);
+});
+
 app.listen(PORT, () => {
     console.log('app now listening on ' + PORT);
 });

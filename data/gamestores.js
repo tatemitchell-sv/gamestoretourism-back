@@ -86,7 +86,7 @@ const data = [
     ],
     events: [
       {
-        id: "1",
+        id: 1,
         start: "2022-04-29 19:00",
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
@@ -100,7 +100,7 @@ const data = [
         },
       },
       {
-        id: "2",
+        id: 2,
         start: "2022-04-29 19:00",
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
@@ -114,7 +114,7 @@ const data = [
         },
       },
       {
-        id: "3",
+        id: 3,
         start: "2022-04-29 19:00",
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
@@ -128,7 +128,7 @@ const data = [
         },
       },
       {
-        id: "4",
+        id: 4,
         start: "2022-04-29 19:00",
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
