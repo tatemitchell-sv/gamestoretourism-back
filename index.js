@@ -86,6 +86,27 @@ app.post('/createevent', (rec, res) => {
     return res.json(storetoreturn);
 });
 
+app.post('/createstore', (rec, res) => {
+    console.log('route /createstore requested');
+    
+    const { newStore } = rec.body;
+    console.log('logging test: ', newStore.name);
+
+    // create new id for store
+    let newStoreID = +data[data.length - 1].id + 1;
+    newStoreID = newStoreID.toString();
+
+    console.log('logging test: newStoreID = ', newStoreID);
+
+    // assign ID
+    newStore.id = newStoreID;
+
+    // add to data array
+    data.push(newStore);
+
+    return res.json(newStore);
+});
+
 app.put('/editevent', (rec, res) => {
     console.log('route /editevent requested');
 
@@ -102,6 +123,26 @@ app.put('/editevent', (rec, res) => {
     });
 
     storetoreturn.events[edittedEvent.id - 1] = edittedEvent;
+
+    console.log('saved store is: ', storetoreturn);
+    return res.json(storetoreturn);
+});
+
+app.put('/editstore', (rec, res) => {
+    console.log('route /editstore requested');
+
+    const { edittedStore, storeID } = rec.body;
+    
+    console.log('logging test: ', edittedStore);
+
+    let storetoreturn = {};
+
+    data.forEach( store => {
+        if (store.id === storeID) {
+            store = edittedStore;
+            storetoreturn = store;
+        }
+    });
 
     console.log('saved store is: ', storetoreturn);
     return res.json(storetoreturn);

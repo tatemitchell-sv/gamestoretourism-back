@@ -2,7 +2,7 @@ const data = [
   // Round Table Games
   {
     name: "Round Table Games",
-    id: "001",
+    id: "1",
     locations: {
       latitude: "43.490080",
       longitude: "-112.023890",
@@ -213,7 +213,7 @@ const data = [
   // A Street Games
   {
     name: "A Street Games",
-    id: "002",
+    id: "2",
     locations: {
       latitude: "43.492510",
       longitude: "-112.041210",
@@ -382,7 +382,7 @@ const data = [
   // Madness Games & Comics
   {
     name: "Madness Games & Comics",
-    id: "003",
+    id: "3",
     locations: {
       latitude: "33.039810",
       longitude: "-96.731567",
@@ -551,7 +551,7 @@ const data = [
   // Generation X Games & Comics
   {
     name: "Generation X Games & Comics",
-    id: "004",
+    id: "4",
     locations: {
       latitude: "32.850910",
       longitude: "-97.109520",
@@ -720,7 +720,7 @@ const data = [
   // Boardwalk Games
   {
     name: "Boardwalk Games",
-    id: "005",
+    id: "5",
     locations: {
       latitude: "32.985720",
       longitude: "-96.853720",
@@ -889,7 +889,7 @@ const data = [
   // GamePulse
   {
     name: "GamePulse",
-    id: "006",
+    id: "6",
     locations: {
       latitude: "43.825680",
       longitude: "-111.782020",
@@ -1058,7 +1058,7 @@ const data = [
   // Gameopolis
   {
     name: "Gameopolis",
-    id: "007",
+    id: "7",
     locations: {
       latitude: "43.487670",
       longitude: "-112.033920",
@@ -1227,7 +1227,7 @@ const data = [
   // Inner Circle Comics and Games
   {
     name: "Inner Circle Comics and Games",
-    id: "008",
+    id: "8",
     locations: {
       latitude: "43.482290",
       longitude: "-111.990580",
