@@ -72,6 +72,7 @@ app.post('/createevent', (rec, res) => {
 
     const { newEvent, storeID } = rec.body;
     console.log('logging test: ', newEvent);
+
     let storetoreturn = {};
 
     data.forEach( store => {
@@ -82,6 +83,47 @@ app.post('/createevent', (rec, res) => {
         }
     });
     
+    return res.json(storetoreturn);
+});
+
+app.put('/editevent', (rec, res) => {
+    console.log('route /editevent requested');
+
+    const { edittedEvent, storeID } = rec.body;
+    
+    console.log('logging test: ', edittedEvent);
+
+    let storetoreturn = {};
+
+    data.forEach( store => {
+        if (store.id === storeID) {
+            storetoreturn = store;
+        }
+    });
+
+    storetoreturn.events[edittedEvent.id - 1] = edittedEvent;
+
+    console.log('saved store is: ', storetoreturn);
+    return res.json(storetoreturn);
+});
+
+app.delete('/deleteevent', (rec,res) => {
+    console.log('route /deleteevent requested');
+    console.log('logging test 1: ', rec.body);
+    const { eventID, storeID } = rec.body;
+    let storetoreturn = {};
+    console.log('logging test 2: ', eventID);
+    data.forEach( store => {
+        if (store.id === storeID){
+            store.events = store.events.filter(event => {
+                if(event.id !== eventID){
+                    return event;
+                }
+            })
+            storetoreturn = store;
+        }
+    })
+    console.log('saved store is: ', storetoreturn);
     return res.json(storetoreturn);
 });
 
