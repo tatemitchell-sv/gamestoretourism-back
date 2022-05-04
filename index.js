@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const data = require("./data/gamestores.js");
+let data = require("./data/gamestores.js");
 const searchUtils = require("./utils/searchUtils.js");
 const app = express();
 const PORT = 8081;
@@ -8,20 +8,20 @@ const PORT = 8081;
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (rec, res) => {
+app.get('/', (req, res) => {
     return res.json(data);
 });
 
-app.get('/store/:id', (rec, res) => {
-    const store = data.find(store => store.id === rec.params.id);
+app.get('/store/:id', (req, res) => {
+    const store = data.find(store => store.id === req.params.id);
     return res.json(store);
 });
 
-app.post('/simplesearch', (rec, res) => {
+app.post('/simplesearch', (req, res) => {
 
-    if (rec.body.searchString){
+    if (req.body.searchString){
 
-        const { searchString } = rec.body;
+        const { searchString } = req.body;
         
         const filteredData = data.filter( store => {
             if (searchUtils.nameMatch(store,searchString) 
@@ -47,11 +47,11 @@ app.post('/simplesearch', (rec, res) => {
     return res.json({});
 });
 
-app.post('/advancedsearch', (rec, res) => {
+app.post('/advancedsearch', (req, res) => {
     console.log('route /advancedsearch requested')
-    console.log('logging test: ', rec.body)
+    console.log('logging test: ', req.body)
 
-    const { storeName, city, state, zip, mtg, dnd, ygo, pok, soc} = rec.body;
+    const { storeName, city, state, zip, mtg, dnd, ygo, pok, soc} = req.body;
 
     const filteredData = data.filter( store => {
         if (searchUtils.nameMatch(store,storeName) 
@@ -66,11 +66,11 @@ app.post('/advancedsearch', (rec, res) => {
     return res.json(filteredData);
 });
 
-app.post('/createevent', (rec, res) => {
+app.post('/createevent', (req, res) => {
     console.log('route /createevent requested');
     
 
-    const { newEvent, storeID } = rec.body;
+    const { newEvent, storeID } = req.body;
     console.log('logging test: ', newEvent);
 
     let storetoreturn = {};
@@ -86,10 +86,10 @@ app.post('/createevent', (rec, res) => {
     return res.json(storetoreturn);
 });
 
-app.post('/createstore', (rec, res) => {
+app.post('/createstore', (req, res) => {
     console.log('route /createstore requested');
     
-    const { newStore } = rec.body;
+    const { newStore } = req.body;
     console.log('logging test: ', newStore.name);
 
     // create new id for store
@@ -107,51 +107,68 @@ app.post('/createstore', (rec, res) => {
     return res.json(newStore);
 });
 
-app.put('/editevent', (rec, res) => {
+app.put('/editevent', (req, res) => {
     console.log('route /editevent requested');
 
-    const { edittedEvent, storeID } = rec.body;
+    const { edittedEvent, storeID } = req.body;
     
     console.log('logging test: ', edittedEvent);
 
     let storetoreturn = {};
 
-    data.forEach( store => {
-        if (store.id === storeID) {
-            storetoreturn = store;
+    data.forEach( (store, i) => {
+        if (store.id === storeID){
+            store.events.forEach( (event, j) => {
+                if (event.id === edittedEvent.id){
+                    data[i].events[j] = edittedEvent;
+                }
+            })
+            storetoreturn = data[i];
         }
     });
-
-    storetoreturn.events[edittedEvent.id - 1] = edittedEvent;
 
     console.log('saved store is: ', storetoreturn);
     return res.json(storetoreturn);
 });
 
-app.put('/editstore', (rec, res) => {
+app.put('/editstore', (req, res) => {
     console.log('route /editstore requested');
 
-    const { edittedStore, storeID } = rec.body;
+    const { edittedStore, storeID } = req.body;
     
     console.log('logging test: ', edittedStore);
 
     let storetoreturn = {};
 
-    data.forEach( store => {
+    data.forEach( (store, i) => {
         if (store.id === storeID) {
-            store = edittedStore;
-            storetoreturn = store;
+            data[i] = edittedStore;
+            storetoreturn = data[i];
         }
-    });
+    })
 
     console.log('saved store is: ', storetoreturn);
     return res.json(storetoreturn);
 });
 
-app.delete('/deleteevent', (rec,res) => {
+app.delete('/deletestore', (req,res) => {
+    console.log('route /deletestore requested');
+    console.log('logging test 1: ', req.body);
+
+    const { storeID } = req.body;
+    data = data.filter( store => {
+        if (store.id !== storeID) {
+            return store;
+        }
+    })
+
+    return res.json(data);
+});
+
+app.delete('/deleteevent', (req,res) => {
     console.log('route /deleteevent requested');
-    console.log('logging test 1: ', rec.body);
-    const { eventID, storeID } = rec.body;
+    console.log('logging test 1: ', req.body);
+    const { eventID, storeID } = req.body;
     let storetoreturn = {};
     console.log('logging test 2: ', eventID);
     data.forEach( store => {
