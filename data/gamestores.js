@@ -192,6 +192,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -202,6 +203,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -212,6 +214,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -222,6 +225,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -232,6 +236,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -346,6 +351,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -356,6 +362,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -366,6 +373,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -376,6 +384,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -386,6 +395,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -500,6 +510,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -510,6 +521,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -520,6 +532,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -530,6 +543,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -540,6 +554,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -654,6 +669,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -664,6 +680,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -674,6 +691,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -684,6 +702,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -694,6 +713,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -808,6 +828,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -818,6 +839,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -828,6 +850,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -838,6 +861,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -848,6 +872,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -962,6 +987,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -972,6 +998,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -982,6 +1009,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -992,6 +1020,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -1002,6 +1031,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
@@ -1116,6 +1146,7 @@ const data = [
     },
     productsServices: [
       {
+        id: 1,
         name: "Magic: The Gathering",
         info: "",
         img: { imgName: "MTGLogo.png", imgId: "v1650927883", },
@@ -1126,6 +1157,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650917900/gamestoretour/mtgIconBlack_nratyl.png",
       },
       {
+        id: 2,
         name: "Settlers of Catan",
         info: "",
         img: { imgName: "CatanLogo.jpg", imgId: "v1650928205", },
@@ -1136,6 +1168,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/catanHexBlack_zj1xob.png",
       },
       {
+        id: 3,
         name: "Yu-Gi-Oh!",
         info: "",
         img: { imgName: "YuGiOhLogo.jpg", imgId: "v1650927883", },
@@ -1146,6 +1179,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650920230/gamestoretour/yugiohIconBlack_chclh5.png",
       },
       {
+        id: 4,
         name: "Dungeons & Dragons",
         info: "",
         img: { imgName: "DnDLogo.png", imgId: "v1650928205", },
@@ -1156,6 +1190,7 @@ const data = [
           "img:https://res.cloudinary.com/htatemitchell/image/upload/v1650918524/gamestoretour/DnDIconBlack_wnlnlz.png",
       },
       {
+        id: 5,
         name: "Pokemon",
         info: "",
         img: { imgName: "PokemonLogo.jpg", imgId: "v1650927883", },
