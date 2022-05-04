@@ -8,15 +8,18 @@ const PORT = 8081;
 app.use(cors());
 app.use(express.json());
 
+// get all stores
 app.get('/', (req, res) => {
     return res.json(data);
 });
 
+// get store by id
 app.get('/store/:id', (req, res) => {
     const store = data.find(store => store.id === req.params.id);
     return res.json(store);
 });
 
+// simple search (search bar)
 app.post('/simplesearch', (req, res) => {
 
     if (req.body.searchString){
@@ -47,6 +50,7 @@ app.post('/simplesearch', (req, res) => {
     return res.json({});
 });
 
+// advanced search
 app.post('/advancedsearch', (req, res) => {
     console.log('route /advancedsearch requested')
     console.log('logging test: ', req.body)
@@ -66,6 +70,7 @@ app.post('/advancedsearch', (req, res) => {
     return res.json(filteredData);
 });
 
+// create event
 app.post('/createevent', (req, res) => {
     console.log('route /createevent requested');
     
@@ -77,7 +82,7 @@ app.post('/createevent', (req, res) => {
 
     data.forEach( store => {
         if (store.id === storeID){
-            newEvent.id = store.events.length + 1;
+            newEvent.id = store.events[store.events.length - 1].id + 1;
             store.events.push(newEvent);
             storetoreturn = store;
         }
@@ -86,6 +91,29 @@ app.post('/createevent', (req, res) => {
     return res.json(storetoreturn);
 });
 
+
+// create product
+app.post('/createproduct', (req, res) => {
+    console.log('route /createproduct requested');
+    
+
+    const { newProduct, storeID } = req.body;
+    console.log('logging test: ', newProduct);
+
+    let storetoreturn = {};
+
+    data.forEach( store => {
+        if (store.id === storeID){
+            newProduct.id = store.productsServices[store.productsServices.length - 1].id + 1;
+            store.productsServices.push(newProduct);
+            storetoreturn = store;
+        }
+    });
+    
+    return res.json(storetoreturn);
+});
+
+// create store
 app.post('/createstore', (req, res) => {
     console.log('route /createstore requested');
     
@@ -107,6 +135,7 @@ app.post('/createstore', (req, res) => {
     return res.json(newStore);
 });
 
+// edit event
 app.put('/editevent', (req, res) => {
     console.log('route /editevent requested');
 
@@ -131,6 +160,33 @@ app.put('/editevent', (req, res) => {
     return res.json(storetoreturn);
 });
 
+// edit product
+app.put('/editproduct', (req, res) => {
+    console.log('route /editproduct requested');
+
+    const { edittedProduct, storeID } = req.body;
+    
+    console.log('logging test: ', edittedProduct);
+
+    let storetoreturn = {};
+
+    data.forEach( (store, i) => {
+        if (store.id === storeID){
+            store.productsServices.forEach( (product, j) => {
+                if (product.id === edittedProduct.id){
+                    data[i].productsServices[j] = edittedProduct;
+                }
+            })
+            storetoreturn = data[i];
+        }
+    });
+
+    console.log('saved store is: ', storetoreturn);
+    return res.json(storetoreturn);
+});
+
+
+// edit store
 app.put('/editstore', (req, res) => {
     console.log('route /editstore requested');
 
@@ -151,6 +207,7 @@ app.put('/editstore', (req, res) => {
     return res.json(storetoreturn);
 });
 
+// delete store
 app.delete('/deletestore', (req,res) => {
     console.log('route /deletestore requested');
     console.log('logging test 1: ', req.body);
@@ -165,6 +222,7 @@ app.delete('/deletestore', (req,res) => {
     return res.json(data);
 });
 
+// delete event
 app.delete('/deleteevent', (req,res) => {
     console.log('route /deleteevent requested');
     console.log('logging test 1: ', req.body);
@@ -176,6 +234,27 @@ app.delete('/deleteevent', (req,res) => {
             store.events = store.events.filter(event => {
                 if(event.id !== eventID){
                     return event;
+                }
+            })
+            storetoreturn = store;
+        }
+    })
+    console.log('saved store is: ', storetoreturn);
+    return res.json(storetoreturn);
+});
+
+// delete product
+app.delete('/deleteproduct', (req,res) => {
+    console.log('route /deleteproduct requested');
+    console.log('logging test 1: ', req.body);
+    const { productID, storeID } = req.body;
+    let storetoreturn = {};
+    console.log('logging test 2: ', productID);
+    data.forEach( store => {
+        if (store.id === storeID){
+            store.productsServices = store.productsServices.filter(product => {
+                if(product.id !== productID){
+                    return product;
                 }
             })
             storetoreturn = store;
