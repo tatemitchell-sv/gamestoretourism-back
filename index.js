@@ -113,6 +113,27 @@ app.post('/createproduct', (req, res) => {
     return res.json(storetoreturn);
 });
 
+
+// create image
+app.post('/createimage', (req, res) => {
+    console.log('route /createimage requested');
+    
+
+    const { newImage, storeID } = req.body;
+    console.log('logging test: ', newImage);
+
+    let storetoreturn = {};
+
+    data.forEach( store => {
+        if (store.id === storeID){
+            store.gallery.push(newImage);
+            storetoreturn = store;
+        }
+    });
+    
+    return res.json(storetoreturn);
+});
+
 // create store
 app.post('/createstore', (req, res) => {
     console.log('route /createstore requested');
@@ -255,6 +276,27 @@ app.delete('/deleteproduct', (req,res) => {
             store.productsServices = store.productsServices.filter(product => {
                 if(product.id !== productID){
                     return product;
+                }
+            })
+            storetoreturn = store;
+        }
+    })
+    console.log('saved store is: ', storetoreturn);
+    return res.json(storetoreturn);
+});
+
+// delete image
+app.delete('/deleteimage', (req,res) => {
+    console.log('route /deleteimage requested');
+    console.log('logging test 1: ', req.body);
+    const { imageToDelete, storeID } = req.body;
+    let storetoreturn = {};
+    console.log('logging test 2: ', imageToDelete);
+    data.forEach( store => {
+        if (store.id === storeID){
+            store.gallery = store.gallery.filter(image => {
+                if(image.id !== imageToDelete.id){
+                    return image;
                 }
             })
             storetoreturn = store;
