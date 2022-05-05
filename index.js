@@ -13,6 +13,15 @@ app.get('/', (req, res) => {
     return res.json(data);
 });
 
+// get featured stores
+app.get('/featuredstores', (req, res) => {
+
+    const featured = [...data];
+    featured.length = 3;
+
+    return res.json(featured);
+});
+
 // get store by id
 app.get('/store/:id', (req, res) => {
     const store = data.find(store => store.id === req.params.id);

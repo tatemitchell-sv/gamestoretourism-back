@@ -95,7 +95,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -257,7 +257,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -419,7 +419,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -581,7 +581,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -743,7 +743,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -905,7 +905,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -1067,7 +1067,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
@@ -1229,7 +1229,7 @@ const data = [
         end: "2022-04-29 23:00",
         title: "New Capenna Commander Tournament",
         content:
-          '<img src="https://res.cloudinary.com/htatemitchell/image/upload/w_300/v1650927883/gamestoretour/MTGLogo.png" /><p>Fee: TBA</p>',
+          '<p>Fee: TBA</p>',
         class: "MTG",
         img: {
           name: "newcapenna1_umdud7.jpg",
